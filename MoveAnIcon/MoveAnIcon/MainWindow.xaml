@@ -8,10 +8,10 @@
         Title="MainWindow"
         SizeToContent="WidthAndHeight">
     <Grid Height="300" Width="300" RenderTransformOrigin="0.313,0.333">
-        <Button Content="W" Margin="230,250,50,30" Click="Button_Click"/>
-        <Button Content="N" Margin="250,230,30,50" Click="Button_Click"/>
-        <Button Content="E" Margin="270,250,10,30" Click="Button_Click"/>
-        <Button Content="S" Margin="250,270,30,10" Click="Button_Click"/>
-        <TextBox Name="box" Text=""  Margin="0,0,55,55"></TextBox>
+        <Button Name = "W" Content="W" Margin="230,250,50,30" Click="Button_Click"/>
+        <Button Name = "N" Content="N" Margin="250,230,30,50" Click="Button_Click"/>
+        <Button Name = "E" Content="E" Margin="270,250,10,30" Click="Button_Click"/>
+        <Button Name = "S" Content="S" Margin="250,270,30,10" Click="Button_Click"/>
+        <TextBox Name="box" Margin="0,0,55,55" FontFamily="Consolas"/>
     </Grid>
 </Window>

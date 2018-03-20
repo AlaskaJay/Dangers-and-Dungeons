@@ -20,14 +20,25 @@ namespace MoveAnIcon
     /// </summary>
     public partial class MainWindow : Window
     {
+        Map board = new Map();
         public MainWindow()
         {
             InitializeComponent();
+            box.Text = board.toString();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            box.Text = "Hello";
+            if (sender.Equals(W))
+                board.move(3);
+            else if (sender.Equals(N))
+                board.move(0);
+            else if (sender.Equals(E))
+                board.move(1);
+            else if (sender.Equals(S))
+                board.move(2);
+
+            box.Text = board.toString();
         }
     }
 }

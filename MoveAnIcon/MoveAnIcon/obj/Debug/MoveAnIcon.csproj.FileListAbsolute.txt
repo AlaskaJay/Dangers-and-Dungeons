@@ -13,3 +13,18 @@ C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug
 C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.csproj.CoreCompileInputs.cache
 C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.exe
 C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.pdb
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\bin\Debug\MoveAnIcon.exe.config
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\bin\Debug\MoveAnIcon.exe
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\bin\Debug\MoveAnIcon.pdb
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.csprojResolveAssemblyReference.cache
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\obj\Debug\MainWindow.g.cs
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\obj\Debug\App.g.cs
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon_MarkupCompile.cache
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon_MarkupCompile.lref
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\obj\Debug\MainWindow.baml
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.g.resources
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.Properties.Resources.resources
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.csproj.GenerateResource.Cache
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.csproj.CoreCompileInputs.cache
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.exe
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.pdb
