@@ -1,0 +1,15 @@
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\bin\Debug\MoveAnIcon.exe.config
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\bin\Debug\MoveAnIcon.exe
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\bin\Debug\MoveAnIcon.pdb
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.csprojResolveAssemblyReference.cache
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\MainWindow.g.cs
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\App.g.cs
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon_MarkupCompile.cache
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon_MarkupCompile.lref
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\MainWindow.baml
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.g.resources
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.Properties.Resources.resources
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.csproj.GenerateResource.Cache
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.csproj.CoreCompileInputs.cache
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.exe
+C:\Users\Alaska Marie Keyleth\source\repos\CS320\MoveAnIcon\MoveAnIcon\obj\Debug\MoveAnIcon.pdb

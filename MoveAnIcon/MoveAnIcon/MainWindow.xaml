@@ -1,0 +1,17 @@
+﻿<Window x:Class="MoveAnIcon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoveAnIcon"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        SizeToContent="WidthAndHeight">
+    <Grid Height="300" Width="300" RenderTransformOrigin="0.313,0.333">
+        <Button Content="W" Margin="230,250,50,30" Click="Button_Click"/>
+        <Button Content="N" Margin="250,230,30,50" Click="Button_Click"/>
+        <Button Content="E" Margin="270,250,10,30" Click="Button_Click"/>
+        <Button Content="S" Margin="250,270,30,10" Click="Button_Click"/>
+        <TextBox Name="box" Text=""  Margin="0,0,55,55"></TextBox>
+    </Grid>
+</Window>
