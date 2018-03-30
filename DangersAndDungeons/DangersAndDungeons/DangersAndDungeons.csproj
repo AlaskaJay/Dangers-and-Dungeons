@@ -68,11 +68,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\DoorTile.cs" />
     <Compile Include="Model\Dungeon.cs" />
-    <Compile Include="Model\Floor.cs" />
+    <Compile Include="Model\FloorTile.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Model\Room.cs" />
     <Compile Include="Model\Tile.cs" />
+    <Compile Include="Model\WallTile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
