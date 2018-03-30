@@ -24,5 +24,19 @@ namespace DangersAndDungeons
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender.Equals(W))
+                box.Text = "W";
+            else if (sender.Equals(N))
+                box.Text = "N";
+            else if (sender.Equals(E))
+                box.Text = "E";
+            else if (sender.Equals(S))
+                box.Text = "S";
+
+            //box.Text
+        }
     }
 }

@@ -1,0 +1,15 @@
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\DangersAndDungeons.csprojResolveAssemblyReference.cache
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\MainWindow.g.cs
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\App.g.cs
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\DangersAndDungeons_MarkupCompile.cache
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\DangersAndDungeons_MarkupCompile.lref
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\bin\Debug\DangersAndDungeons.exe.config
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\bin\Debug\DangersAndDungeons.exe
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\bin\Debug\DangersAndDungeons.pdb
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\MainWindow.baml
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\DangersAndDungeons.g.resources
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\DangersAndDungeons.Properties.Resources.resources
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\DangersAndDungeons.csproj.GenerateResource.Cache
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\DangersAndDungeons.csproj.CoreCompileInputs.cache
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\DangersAndDungeons.exe
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\DangersAndDungeons.pdb
