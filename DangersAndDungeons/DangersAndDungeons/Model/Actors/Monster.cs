@@ -14,6 +14,11 @@ namespace DangersAndDungeons.Model.Actors
         public int room { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public List<Item> stash { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+        public void addItem(Item pickUp)
+        {
+            throw new NotImplementedException();
+        }
+
         public void move(int direction, Dungeon dungeon)
         {
             throw new NotImplementedException();

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DangersAndDungeons.Model;
+using DangersAndDungeons.Model.Actors;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,21 +22,28 @@ namespace DangersAndDungeons
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Player player;
+        private Dungeon dungeon;
+
         public MainWindow()
         {
+            dungeon = new Dungeon();
+            player = new Player();
+            Console.WriteLine("Hit");
             InitializeComponent();
+            Console.WriteLine("Hit");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (sender.Equals(W))
-                box.Text = "W";
-            else if (sender.Equals(N))
-                box.Text = "N";
-            else if (sender.Equals(E))
-                box.Text = "E";
+            if (sender.Equals(N))
+                player.move(0, dungeon);
+            else if (sender.Equals(W))
+                player.move(1, dungeon);
             else if (sender.Equals(S))
-                box.Text = "S";
+                player.move(2, dungeon);
+            else if (sender.Equals(E))
+                player.move(3, dungeon);
 
             //box.Text
         }

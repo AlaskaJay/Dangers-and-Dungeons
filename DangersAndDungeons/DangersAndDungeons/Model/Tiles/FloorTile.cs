@@ -9,7 +9,7 @@ namespace DangersAndDungeons.Model
     class FloorTile : Tile
     {
         private char DEFAULT = '.';
-        private List<Item> stash;
+        //private List<Item> stash;
 
         public char toChar()
         {

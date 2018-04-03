@@ -9,6 +9,7 @@ namespace DangersAndDungeons.Model
     interface Actor
     {
         void move(int direction, Dungeon dungeon);
+        void addItem(Item pickUp);
 
         char symbol
         {
