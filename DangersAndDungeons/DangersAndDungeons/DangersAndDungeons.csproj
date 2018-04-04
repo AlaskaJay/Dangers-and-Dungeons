@@ -68,16 +68,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Actors\Monster.cs" />
-    <Compile Include="Model\Actors\Player.cs" />
-    <Compile Include="Model\Tiles\DoorTile.cs" />
-    <Compile Include="Model\Dungeon.cs" />
-    <Compile Include="Model\Tiles\FloorTile.cs" />
-    <Compile Include="Model\Actors\Actor.cs" />
-    <Compile Include="Model\Items\Item.cs" />
+    <Compile Include="Model\Player.cs" />
     <Compile Include="Model\Room.cs" />
+    <Compile Include="Model\Tiles\Door.cs" />
+    <Compile Include="Model\Tiles\Floor.cs" />
     <Compile Include="Model\Tiles\Tile.cs" />
-    <Compile Include="Model\Tiles\WallTile.cs" />
+    <Compile Include="Model\Tiles\Wall.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

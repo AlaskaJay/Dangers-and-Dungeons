@@ -8,9 +8,6 @@ namespace DangersAndDungeons.Model
 {
     interface Tile
     {
-        char toChar();
-        String toString();
-
-
+        char Display { get; }
     }
 }

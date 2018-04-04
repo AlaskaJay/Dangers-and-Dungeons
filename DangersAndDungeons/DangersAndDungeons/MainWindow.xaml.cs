@@ -1,5 +1,4 @@
 ﻿using DangersAndDungeons.Model;
-using DangersAndDungeons.Model.Actors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,29 +22,33 @@ namespace DangersAndDungeons
     public partial class MainWindow : Window
     {
         private Player player;
-        private Dungeon dungeon;
+        private Room room;
+        private int commands;
 
         public MainWindow()
         {
-            dungeon = new Dungeon();
             player = new Player();
-            Console.WriteLine("Hit");
+            room = new Room();
+            commands = 0;
             InitializeComponent();
-            Console.WriteLine("Hit");
+            player.updateDisplay(room);
+            box.Text = player.getDisplay();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (sender.Equals(N))
-                player.move(0, dungeon);
-            else if (sender.Equals(W))
-                player.move(1, dungeon);
+                player.move('N', room);
             else if (sender.Equals(S))
-                player.move(2, dungeon);
+                player.move('S', room);
+            else if (sender.Equals(W))
+                player.move('W', room);
             else if (sender.Equals(E))
-                player.move(3, dungeon);
+                player.move('E', room);
 
-            //box.Text
+            box.Text = player.getDisplay();
+            commands++;
+            box.Text = box.Text + "\nCommands: " + commands;
         }
     }
 }
