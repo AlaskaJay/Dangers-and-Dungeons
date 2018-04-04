@@ -8,42 +8,56 @@ namespace DangersAndDungeons.Model
 {
     class Room
     {
-        private Tile[,] tiles;
+        private char[,] map;
 
         public Room()
         {
-            tiles = new Tile[7, 7];
-            for(int i = 0; i < 7; i++)
+            map = new char[7, 7];
+            for (int i = 0; i < map.GetLength(0) && i < map.GetLength(1); i++)
             {
-                tiles[i, 0] = new WallTile();
-                tiles[i, 6] = new WallTile();
-                tiles[6, i] = new WallTile();
-                tiles[0, i] = new WallTile();
+                Console.WriteLine(i);
+                map[0, i] = 'W';
+                map[6, i] = 'W';
+                map[i, 0] = 'W';
+                map[i, 6] = 'W';
             }
-            tiles[0, 3] = new DoorTile();
-            tiles[6, 3] = new DoorTile();
-            tiles[3, 0] = new DoorTile();
-            tiles[3, 6] = new DoorTile();
+            for (int i = 1; i < map.GetLength(0) - 1; i++)
+            {
+                for (int j = 1; j < map.GetLength(1) - 1; j++)
+                {
+                    map[i, j] = '.';
+                }
+            }
         }
 
         public Room(int size)
         {
-
+            map = new char[size, size];
+            for (int i = 0; i < map.GetLength(0) && i < map.GetLength(1); i++)
+            {
+                Console.WriteLine(i);
+                map[0, i] = 'W';
+                map[size - 1, i] = 'W';
+                map[i, 0] = 'W';
+                map[i, size - 1] = 'W';
+            }
+            for (int i = 1; i < map.GetLength(0) - 1; i++)
+            {
+                for (int j = 1; j < map.GetLength(1) - 1; j++)
+                {
+                    map[i, j] = '.';
+                }
+            }
         }
 
-        public Room(int width, int height)
+        public char[,] getMap()
         {
-
+            return map;
         }
 
-        public Tile[,] getTiles()
+        public void getMap(char[,] value)
         {
-            return tiles;
-        }
-
-        public Tile getTile(int x, int y)
-        {
-            return tiles[x, y];
+            map = value;
         }
     }
 }
