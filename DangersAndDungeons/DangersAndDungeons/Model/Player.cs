@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DangersAndDungeons.Model.Tiles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,8 +15,8 @@ namespace DangersAndDungeons.Model
 
         public Player()
         {
-            x = 4;
-            y = 4;
+            x = 3;
+            y = 3;
         }
 
         public int getX()
@@ -51,7 +52,7 @@ namespace DangersAndDungeons.Model
                 for (int j = 0; j < room.getMap().GetLength(1); j++)
                 {
                     if (i != y || j != x)
-                        display += room.getMap()[i, j];
+                        display += room.getMap()[i, j].Display;
                     else
                         display += 'P';
                 }
@@ -62,27 +63,32 @@ namespace DangersAndDungeons.Model
 
         public void move(char dir, Room room)
         {
+            Wall wall = new Wall();
             if (dir == 'N')
             {
-                if (room.getMap()[x, y - 1] != 'W')
+                if (room.getMap()[x, y - 1].GetType() != wall.GetType())
                     y--;
+                Console.Write("N, ");
             }
             else if(dir == 'S')
             {
-                if (room.getMap()[x, y + 1] != 'W')
+                if (room.getMap()[x, y + 1].GetType() != wall.GetType())
                     y++;
+                Console.Write("S, ");
             }
             else if(dir == 'W')
             {
-                if (room.getMap()[x - 1, y] != 'W')
+                if (room.getMap()[x - 1, y].GetType() != wall.GetType())
                     x--;
+                Console.Write("W, ");
             }
             else if(dir == 'E')
             {
-                if (room.getMap()[x + 1, y] != 'W')
+                if (room.getMap()[x + 1, y].GetType() != wall.GetType())
                     x++;
+                Console.Write("E, ");
             }
-
+            Console.WriteLine(x+","+y);
             updateDisplay(room);
         }
     }

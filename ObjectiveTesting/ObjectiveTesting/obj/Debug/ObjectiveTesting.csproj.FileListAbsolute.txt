@@ -1,0 +1,7 @@
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\ObjectiveTesting\ObjectiveTesting\bin\Debug\ObjectiveTesting.exe.config
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\ObjectiveTesting\ObjectiveTesting\bin\Debug\ObjectiveTesting.exe
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\ObjectiveTesting\ObjectiveTesting\bin\Debug\ObjectiveTesting.pdb
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\ObjectiveTesting\ObjectiveTesting\obj\Debug\ObjectiveTesting.csproj.CoreCompileInputs.cache
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\ObjectiveTesting\ObjectiveTesting\obj\Debug\ObjectiveTesting.exe
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\ObjectiveTesting\ObjectiveTesting\obj\Debug\ObjectiveTesting.pdb
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\ObjectiveTesting\ObjectiveTesting\obj\Debug\ObjectiveTesting.csprojResolveAssemblyReference.cache

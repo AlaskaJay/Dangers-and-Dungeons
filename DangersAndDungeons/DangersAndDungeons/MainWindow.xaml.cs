@@ -28,7 +28,7 @@ namespace DangersAndDungeons
         public MainWindow()
         {
             player = new Player();
-            room = new Room(9);
+            room = new Room();
             commands = 0;
             InitializeComponent();
             player.updateDisplay(room);

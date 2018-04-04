@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DangersAndDungeons.Model.Tiles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,54 +9,44 @@ namespace DangersAndDungeons.Model
 {
     class Room
     {
-        private char[,] map;
+        private Tile[,] map;
 
         public Room()
         {
-            map = new char[7, 7];
-            for (int i = 0; i < map.GetLength(0) && i < map.GetLength(1); i++)
+            map = new Tile[7, 7];
+            for(int i = 0; i < map.GetLength(0); i++)
             {
-                Console.WriteLine(i);
-                map[0, i] = 'W';
-                map[6, i] = 'W';
-                map[i, 0] = 'W';
-                map[i, 6] = 'W';
+                map[0, i] = new Wall();
+                map[map.GetLength(0)-1, i] = new Wall();
+            }
+            for (int i = 0; i < map.GetLength(1); i++)
+            {
+                map[i, 0] = new Wall();
+                map[i, map.GetLength(1) - 1] = new Wall();
             }
             for (int i = 1; i < map.GetLength(0) - 1; i++)
             {
-                for (int j = 1; j < map.GetLength(1) - 1; j++)
+                for (int j = 1; j < map.GetLength(1)-1; j++)
                 {
-                    map[i, j] = '.';
+                    map[i, j] = new Floor();
                 }
             }
+            map[2, 6] = new Floor();
+            //map[3, 5] = new Door('N');
+            map[3, 6] = new Door('N');
         }
 
         public Room(int size)
         {
-            map = new char[size, size];
-            for (int i = 0; i < map.GetLength(0) && i < map.GetLength(1); i++)
-            {
-                Console.WriteLine(i);
-                map[0, i] = 'W';
-                map[size - 1, i] = 'W';
-                map[i, 0] = 'W';
-                map[i, size - 1] = 'W';
-            }
-            for (int i = 1; i < map.GetLength(0) - 1; i++)
-            {
-                for (int j = 1; j < map.GetLength(1) - 1; j++)
-                {
-                    map[i, j] = '.';
-                }
-            }
+            
         }
 
-        public char[,] getMap()
+        public Tile[,] getMap()
         {
             return map;
         }
 
-        public void getMap(char[,] value)
+        public void getMap(Tile[,] value)
         {
             map = value;
         }

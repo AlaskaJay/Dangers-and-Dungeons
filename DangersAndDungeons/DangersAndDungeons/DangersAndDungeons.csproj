@@ -70,6 +70,10 @@
   <ItemGroup>
     <Compile Include="Model\Player.cs" />
     <Compile Include="Model\Room.cs" />
+    <Compile Include="Model\Tiles\Door.cs" />
+    <Compile Include="Model\Tiles\Floor.cs" />
+    <Compile Include="Model\Tiles\Tile.cs" />
+    <Compile Include="Model\Tiles\Wall.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
