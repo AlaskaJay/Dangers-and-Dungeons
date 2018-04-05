@@ -29,5 +29,11 @@ namespace DangersAndDungeons.Model.Tiles
             display = 'D';
             direction = dir;
         }
+
+        public Door(char dir, char dis)
+        {
+            display = dis;
+            direction = dir;
+        }
     }
 }

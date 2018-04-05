@@ -22,29 +22,29 @@ namespace DangersAndDungeons
     public partial class MainWindow : Window
     {
         private Player player;
-        private Room room;
+        private Dungeon dungeon;
         private int commands;
 
         public MainWindow()
         {
             player = new Player();
-            room = new Room();
+            dungeon = new Dungeon();
             commands = 0;
             InitializeComponent();
-            player.updateDisplay(room);
+            player.updateDisplay(dungeon.getMap()[0]);
             box.Text = player.getDisplay();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (sender.Equals(N))
-                player.move('N', room);
+                player.move('N', dungeon.getMap()[0]);
             else if (sender.Equals(S))
-                player.move('S', room);
+                player.move('S', dungeon.getMap()[0]);
             else if (sender.Equals(W))
-                player.move('W', room);
+                player.move('W', dungeon.getMap()[0]);
             else if (sender.Equals(E))
-                player.move('E', room);
+                player.move('E', dungeon.getMap()[0]);
 
             box.Text = player.getDisplay();
             commands++;

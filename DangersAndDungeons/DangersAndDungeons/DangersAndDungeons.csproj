@@ -68,6 +68,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Dungeon.cs" />
     <Compile Include="Model\Player.cs" />
     <Compile Include="Model\Room.cs" />
     <Compile Include="Model\Tiles\Door.cs" />

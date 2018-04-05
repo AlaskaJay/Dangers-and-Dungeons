@@ -52,7 +52,7 @@ namespace DangersAndDungeons.Model
                 for (int j = 0; j < room.getMap().GetLength(1); j++)
                 {
                     if (i != y || j != x)
-                        display += room.getMap()[i, j].Display;
+                        display += room.getMap()[j, i].Display;
                     else
                         display += 'P';
                 }

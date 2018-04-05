@@ -26,14 +26,15 @@ namespace DangersAndDungeons.Model
             }
             for (int i = 1; i < map.GetLength(0) - 1; i++)
             {
-                for (int j = 1; j < map.GetLength(1)-1; j++)
+                for (int j = 1; j < map.GetLength(1) - 1; j++)
                 {
                     map[i, j] = new Floor();
                 }
             }
-            map[2, 6] = new Floor();
-            //map[3, 5] = new Door('N');
-            map[3, 6] = new Door('N');
+            map[3, 0] = new Door('N');
+            map[0, 3] = new Door('W');
+            map[6, 3] = new Door('E');
+            //map[6, 3] = new Door('S', 'D');
         }
 
         public Room(int size)
