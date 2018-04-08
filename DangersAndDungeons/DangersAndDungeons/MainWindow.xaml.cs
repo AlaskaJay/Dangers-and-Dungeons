@@ -31,24 +31,25 @@ namespace DangersAndDungeons
             dungeon = new Dungeon();
             commands = 0;
             InitializeComponent();
-            player.updateDisplay(dungeon.getMap()[0]);
+            player.updateDisplay(dungeon);
             box.Text = player.getDisplay();
+            box.Text += "\nCommands: " + commands;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (sender.Equals(N))
-                player.move('N', dungeon.getMap()[0]);
+                player.move('N', dungeon);
             else if (sender.Equals(S))
-                player.move('S', dungeon.getMap()[0]);
+                player.move('S', dungeon);
             else if (sender.Equals(W))
-                player.move('W', dungeon.getMap()[0]);
+                player.move('W', dungeon);
             else if (sender.Equals(E))
-                player.move('E', dungeon.getMap()[0]);
+                player.move('E', dungeon);
 
             box.Text = player.getDisplay();
             commands++;
-            box.Text = box.Text + "\nCommands: " + commands;
+            box.Text += "\nCommands: " + commands;
         }
     }
 }

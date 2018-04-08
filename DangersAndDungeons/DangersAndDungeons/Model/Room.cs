@@ -37,7 +37,7 @@ namespace DangersAndDungeons.Model
             //map[6, 3] = new Door('S', 'D');
         }
 
-        public Room(int size)
+        public Room(Coord previous, char direction)
         {
             
         }

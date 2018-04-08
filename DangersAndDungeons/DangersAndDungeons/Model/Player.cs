@@ -9,34 +9,44 @@ namespace DangersAndDungeons.Model
 {
     class Player
     {
-        private int x;
-        private int y;
+        private Coord room;
+        private Coord coord;
         private String display;
 
         public Player()
         {
-            x = 3;
-            y = 3;
+            coord = new Coord(3, 3);
+            room = new Coord(0, 0);
         }
 
         public int getX()
         {
-            return x;
+            return coord.getX();
         }
 
         public void setX(int value)
         {
-            x = value;
+            coord.setX(value);
         }
 
         public int getY()
         {
-            return y;
+            return coord.getY();
         }
 
         public void setY(int value)
         {
-            y = value;
+            coord.setY(value);
+        }
+
+        public Coord getRoom()
+        {
+            return room;
+        }
+
+        public void setRoom(Coord value)
+        {
+            room = value;
         }
 
         public String getDisplay()
@@ -44,52 +54,59 @@ namespace DangersAndDungeons.Model
             return display;
         }
 
-        public void updateDisplay(Room room)
+        public void updateDisplay(Dungeon dungeon)
         {
             display = "";
-            for (int i = 0; i < room.getMap().GetLength(0); i++)
+            for (int i = 0; i < dungeon.getRoom(room).getMap().GetLength(0); i++)
             {
-                for (int j = 0; j < room.getMap().GetLength(1); j++)
+                for (int j = 0; j < dungeon.getRoom(room).getMap().GetLength(1); j++)
                 {
-                    if (i != y || j != x)
-                        display += room.getMap()[j, i].Display;
+                    if (i != coord.getY() || j != coord.getX())
+                        display += dungeon.getRoom(room).getMap()[j, i].Display;
                     else
                         display += 'P';
                 }
                 display += "\n";
             }
-            display += "Hello, World!";
+            display += "You are in room: " + room.toString();
         }
 
-        public void move(char dir, Room room)
+        public void move(char dir, Dungeon dungeon)
         {
             Wall wall = new Wall();
+            Door door = new Door();
             if (dir == 'N')
             {
-                if (room.getMap()[x, y - 1].GetType() != wall.GetType())
-                    y--;
-                Console.Write("N, ");
+                if (dungeon.getRoom(room).getMap()[coord.getX(), coord.getY() - 1].GetType() != wall.GetType())
+                    coord.north();
+                //Console.Write("N, ");
             }
             else if(dir == 'S')
             {
-                if (room.getMap()[x, y + 1].GetType() != wall.GetType())
-                    y++;
-                Console.Write("S, ");
+                if (dungeon.getRoom(room).getMap()[coord.getX(), coord.getY() + 1].GetType() != wall.GetType())
+                    coord.south();
+                //Console.Write("S, ");
             }
             else if(dir == 'W')
             {
-                if (room.getMap()[x - 1, y].GetType() != wall.GetType())
-                    x--;
-                Console.Write("W, ");
+                if (dungeon.getRoom(room).getMap()[coord.getX() - 1, coord.getY()].GetType() != wall.GetType())
+                    coord.west();
+                //Console.Write("W, ");
             }
             else if(dir == 'E')
             {
-                if (room.getMap()[x + 1, y].GetType() != wall.GetType())
-                    x++;
-                Console.Write("E, ");
+                if (dungeon.getRoom(room).getMap()[coord.getX() + 1, coord.getY()].GetType() != wall.GetType())
+                    coord.east();
+                //Console.Write("E, ");
             }
-            Console.WriteLine(x+","+y);
-            updateDisplay(room);
+            //Console.WriteLine(coord.getX() + ","+ coord.getY());
+
+            if(dungeon.getRoom(room).getMap()[coord.getX(), coord.getY()].GetType() != door.GetType())
+            {
+
+            }
+
+            updateDisplay(dungeon);
         }
     }
 }

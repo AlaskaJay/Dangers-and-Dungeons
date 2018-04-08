@@ -8,22 +8,27 @@ namespace DangersAndDungeons.Model
 {
     class Dungeon
     {
-        private List<Room> map;
+        private Dictionary<Coord, Room> map;
 
         public Dungeon()
         {
-            map = new List<Room>();
-            map.Add(new Room());
+            map = new Dictionary<Coord, Room>(new Coord(0, 0));
+            map[new Coord(0, 0)] = new Room();
         }
 
-        public List<Room> getMap()
+        public Dictionary<Coord, Room> getMap()
         {
             return map;
         }
 
-        public Room getRoom(int room)
+        public Room getRoom(Coord room)
         {
             return map[room];
+        }
+
+        public Room getRoom(int x, int y)
+        {
+            return map[new Coord(0, 0)];
         }
     }
 }
