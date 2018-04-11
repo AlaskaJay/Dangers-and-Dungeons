@@ -63,7 +63,7 @@ namespace DangersAndDungeons.Model
 
         public int GetHashCode(Coord obj)
         {
-            return obj.getX() + obj.getY();
+            return obj.getX()*100 + obj.getY();
         }
     }
 }

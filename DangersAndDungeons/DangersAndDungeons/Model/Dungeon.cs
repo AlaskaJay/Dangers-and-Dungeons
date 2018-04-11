@@ -23,6 +23,9 @@ namespace DangersAndDungeons.Model
 
         public Room getRoom(Coord room)
         {
+            if(map.ContainsKey(room))
+                return map[room];
+            map[room] = new Room();
             return map[room];
         }
 

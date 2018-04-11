@@ -101,9 +101,28 @@ namespace DangersAndDungeons.Model
             }
             //Console.WriteLine(coord.getX() + ","+ coord.getY());
 
-            if(dungeon.getRoom(room).getMap()[coord.getX(), coord.getY()].GetType() != door.GetType())
+            if(dungeon.getRoom(room).getMap()[coord.getX(), coord.getY()].GetType() == door.GetType())
             {
-
+                if(dir == 'N')
+                {
+                    room.south();
+                    coord = new Coord(3, 5);
+                }
+                else if(dir == 'S')
+                {
+                    room.north();
+                    coord = new Coord(3, 1);
+                }
+                else if(dir == 'W')
+                {
+                    coord = new Coord(5, 3);
+                    room.west();
+                }
+                else if(dir == 'E')
+                {
+                    coord = new Coord(1, 3);
+                    room.east();
+                }
             }
 
             updateDisplay(dungeon);
