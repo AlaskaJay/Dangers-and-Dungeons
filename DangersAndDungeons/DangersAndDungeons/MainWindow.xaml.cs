@@ -34,6 +34,7 @@ namespace DangersAndDungeons
             player.updateDisplay(dungeon);
             box.Text = player.getDisplay();
             box.Text += "\nCommands: " + commands;
+            map.Text = player.getMap();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -46,8 +47,14 @@ namespace DangersAndDungeons
                 player.move('W', dungeon);
             else if (sender.Equals(E))
                 player.move('E', dungeon);
+            else if (sender.Equals(Submit))
+            {
+                player.acceptCommand(input.Text, dungeon);
+                input.Text = "";
+            }
 
             box.Text = player.getDisplay();
+            map.Text = player.getMap();
             commands++;
             box.Text += "\nCommands: " + commands;
         }

@@ -7,14 +7,19 @@
         mc:Ignorable="d"
         Title="Dangers and Dungeons!"
         SizeToContent="WidthAndHeight">
-    <Grid Height="300" Width="300">
-        <Button Name = "W" Content="W" Margin="230,250,50,30" Click="Button_Click"/>
-        <Button Name = "N" Content="N" Margin="250,230,30,50" Click="Button_Click"/>
-        <Button Name = "E" Content="E" Margin="270,250,10,30" Click="Button_Click"/>
-        <Button Name = "S" Content="S" Margin="250,270,30,10" Click="Button_Click"/>
-        <Button Name = "Submit" Content="Submit Command" Margin="0,270,75,10" Click="Button_Click"/>
-        <TextBox Name="box" Margin="0,0,55,55" FontFamily="Consolas" IsEnabled="False"/>
-        <TextBox Name="input" Margin="0,250,75,30" FontFamily="Consolas"/>
+    <Grid Height="300" Width="360">
+        <Button Name = "W" Content="W" Margin="230,250,110,30" Click="Button_Click"/>
+        <Button Name = "N" Content="N" Margin="250,230,090,50" Click="Button_Click"/>
+        <Button Name = "E" Content="E" Margin="270,250,070,30" Click="Button_Click"/>
+        <Button Name = "S" Content="S" Margin="250,270,090,10" Click="Button_Click"/>
+        <Button Name = "Submit" Content="Submit Command" Margin="0,270,135,10" Click="Button_Click"/>
+        <ScrollViewer Margin="0,0,115,55">
+            <TextBox Name="box" FontFamily="Consolas" IsEnabled="False" TextWrapping="Wrap"/>
+        </ScrollViewer>
+        <TextBox Name="map" Margin="250,0,10,160" FontFamily="Consolas" IsEnabled="False" TextWrapping="Wrap"
+                 TextBlock.LineHeight="20" TextBlock.FontSize="24"
+                 TextBlock.LineStackingStrategy="BlockLineHeight"/>
+        <TextBox Name="input" Margin="0,250,135,30" FontFamily="Consolas"/>
 
     </Grid>
 </Window>
