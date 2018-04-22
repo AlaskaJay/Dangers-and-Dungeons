@@ -152,29 +152,69 @@ namespace DangersAndDungeons.Model
                 {
                     room.south();
                     coord = new Coord(3, 5);
-                    commandReply = "You move north through the door.";
-                    commandHistory.Add("Moved north through a door via button");
+                    if(dungeon.getRoom(room).getMap()[coord.getX(), coord.getY()].GetType() == wall.GetType())
+                    {
+                        room.north();
+                        coord = new Coord(3, 1);
+                        commandReply = "You move north towards a door, but there is a wall on the other side.";
+                        commandHistory.Add("Moved north towards a door via button, but was blocked.");
+                    }
+                    else
+                    {
+                        commandReply = "You move north through the door.";
+                        commandHistory.Add("Moved north through a door via button");
+                    }
                 }
                 else if(dir == 'S')
                 {
                     room.north();
                     coord = new Coord(3, 1);
-                    commandReply = "You move south through the door.";
-                    commandHistory.Add("Moved south through a door via button");
+                    if (dungeon.getRoom(room).getMap()[coord.getX(), coord.getY()].GetType() == wall.GetType())
+                    {
+                        room.south();
+                        coord = new Coord(3, 5);
+                        commandReply = "You move south towards a door, but there is a wall on the other side.";
+                        commandHistory.Add("Moved south towards a door via button, but was blocked.");
+                    }
+                    else
+                    {
+                        commandReply = "You move south through the door.";
+                        commandHistory.Add("Moved south through a door via button");
+                    }
                 }
                 else if(dir == 'W')
                 {
                     coord = new Coord(5, 3);
                     room.west();
-                    commandReply = "You move west through the door.";
-                    commandHistory.Add("Moved west through a door via button");
+                    if (dungeon.getRoom(room).getMap()[coord.getX(), coord.getY()].GetType() == wall.GetType())
+                    {
+                        room.east();
+                        coord = new Coord(1, 3);
+                        commandReply = "You move west towards a door, but there is a wall on the other side.";
+                        commandHistory.Add("Moved west towards a door via button, but was blocked.");
+                    }
+                    else
+                    {
+                        commandReply = "You move west through the door.";
+                        commandHistory.Add("Moved west through a door via button");
+                    }
                 }
                 else if(dir == 'E')
                 {
                     coord = new Coord(1, 3);
                     room.east();
-                    commandReply = "You move east through the door.";
-                    commandHistory.Add("Moved east through a door via button");
+                    if (dungeon.getRoom(room).getMap()[coord.getX(), coord.getY()].GetType() == wall.GetType())
+                    {
+                        room.west();
+                        coord = new Coord(5, 3);
+                        commandReply = "You move east towards a door, but there is a wall on the other side.";
+                        commandHistory.Add("Moved east towards a door via button, but was blocked.");
+                    }
+                    else
+                    {
+                        commandReply = "You move east through the door.";
+                        commandHistory.Add("Moved east through a door via button");
+                    }
                 }
             }
 
@@ -184,14 +224,16 @@ namespace DangersAndDungeons.Model
         public void acceptCommand(String command, Dungeon dungeon)
         {
             if (command.ToLower().Contains("teleport"))
-            { 
+            {
                 teleport(command.Substring(9), dungeon);
             }
             else if (command.ToLower().Contains("history"))
             {
                 displayHistory();
             }
-            else if(command.Length == 0)
+            else if (command.ToLower().Contains("commands"))
+                displayCommands();
+            else if (command.Length == 0)
                 commandReply = "No Command";
             else
                 commandReply = "Invalid Command";
@@ -201,9 +243,21 @@ namespace DangersAndDungeons.Model
 
         public void displayHistory()
         {
+            commandReply = "";
             foreach(String s in commandHistory)
             {
                 commandReply = s + "\n" + commandReply;
+            }
+            commandReply = "You have entered these commands:\n" + commandReply;
+        }
+
+        public void displayCommands()
+        {
+            commandReply = "";
+            foreach (String s in commandHistory)
+            {
+                if(!s.ToLower().Contains("button"))
+                    commandReply = s + "\n" + commandReply;
             }
             commandReply = "You have entered these commands:\n" + commandReply;
         }

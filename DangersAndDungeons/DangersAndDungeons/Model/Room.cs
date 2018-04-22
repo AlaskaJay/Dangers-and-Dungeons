@@ -24,13 +24,18 @@ namespace DangersAndDungeons.Model
                 map[i, 0] = new Wall();
                 map[i, map.GetLength(1) - 1] = new Wall();
             }
+            Random r = new Random();
             for (int i = 1; i < map.GetLength(0) - 1; i++)
             {
                 for (int j = 1; j < map.GetLength(1) - 1; j++)
                 {
-                    map[i, j] = new Floor();
+                    if(chanceOfWall(i, j) < r.Next(1, 100))
+                        map[i, j] = new Floor();
+                    else
+                        map[i, j] = new Wall();
                 }
             }
+            map[3, 1] = new Floor();
             map[3, 0] = new Door('N');
             map[0, 3] = new Door('W');
             map[6, 3] = new Door('E');
@@ -45,6 +50,16 @@ namespace DangersAndDungeons.Model
         public void getMap(Tile[,] value)
         {
             map = value;
+        }
+
+        private int chanceOfWall(int x, int y)
+        {
+            int result = 0;
+
+            result += Math.Abs(x - 3) * 15;
+            result += Math.Abs(y - 3) * 15;
+
+            return result;
         }
     }
 }
