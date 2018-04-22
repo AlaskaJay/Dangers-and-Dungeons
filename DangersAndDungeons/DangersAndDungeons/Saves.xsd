@@ -11,7 +11,41 @@
   </xs:annotation>
   <xs:element name="Saves" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Saves" msprop:Generator_UserDSName="Saves">
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded" />
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Rooms" msprop:Generator_TableClassName="RoomsDataTable" msprop:Generator_TableVarName="tableRooms" msprop:Generator_TablePropName="Rooms" msprop:Generator_RowDeletingName="RoomsRowDeleting" msprop:Generator_RowChangingName="RoomsRowChanging" msprop:Generator_RowEvHandlerName="RoomsRowChangeEventHandler" msprop:Generator_RowDeletedName="RoomsRowDeleted" msprop:Generator_UserTableName="Rooms" msprop:Generator_RowChangedName="RoomsRowChanged" msprop:Generator_RowEvArgName="RoomsRowChangeEvent" msprop:Generator_RowClassName="RoomsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Room_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRoom_ID" msprop:Generator_ColumnPropNameInRow="Room_ID" msprop:Generator_ColumnPropNameInTable="Room_IDColumn" msprop:Generator_UserColumnName="Room_ID" type="xs:short" default="0" minOccurs="0" />
+              <xs:element name="Dungeon_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDungeon_ID" msprop:Generator_ColumnPropNameInRow="Dungeon_ID" msprop:Generator_ColumnPropNameInTable="Dungeon_IDColumn" msprop:Generator_UserColumnName="Dungeon_ID" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dungeons" msprop:Generator_TableClassName="DungeonsDataTable" msprop:Generator_TableVarName="tableDungeons" msprop:Generator_TablePropName="Dungeons" msprop:Generator_RowDeletingName="DungeonsRowDeleting" msprop:Generator_RowChangingName="DungeonsRowChanging" msprop:Generator_RowEvHandlerName="DungeonsRowChangeEventHandler" msprop:Generator_RowDeletedName="DungeonsRowDeleted" msprop:Generator_UserTableName="Dungeons" msprop:Generator_RowChangedName="DungeonsRowChanged" msprop:Generator_RowEvArgName="DungeonsRowChangeEvent" msprop:Generator_RowClassName="DungeonsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Dungeon_ID" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDungeon_ID" msprop:Generator_ColumnPropNameInRow="Dungeon_ID" msprop:Generator_ColumnPropNameInTable="Dungeon_IDColumn" msprop:Generator_UserColumnName="Dungeon_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Dungeon_Key" msprop:Generator_ColumnVarNameInTable="columnDungeon_Key" msprop:Generator_ColumnPropNameInRow="Dungeon_Key" msprop:Generator_ColumnPropNameInTable="Dungeon_KeyColumn" msprop:Generator_UserColumnName="Dungeon_Key" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Rooms" />
+      <xs:field xpath="mstns:Room_ID" />
+    </xs:unique>
+    <xs:unique name="Dungeons_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:Dungeons" />
+      <xs:field xpath="mstns:Dungeon_ID" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:Dungeons" />
+      <xs:field xpath="mstns:Dungeon_Key" />
+    </xs:unique>
   </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Dungeons_Rooms" msdata:parent="Dungeons" msdata:child="Rooms" msdata:parentkey="Dungeon_ID" msdata:childkey="Dungeon_ID" msprop:Generator_UserChildTable="Rooms" msprop:Generator_ChildPropName="GetRoomsRows" msprop:Generator_UserRelationName="Dungeons_Rooms" msprop:Generator_RelationVarName="relationDungeons_Rooms" msprop:Generator_UserParentTable="Dungeons" msprop:Generator_ParentPropName="DungeonsRow" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>

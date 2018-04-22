@@ -54,6 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Saves.cs">
+      <DependentUpon>Saves.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Saves.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
