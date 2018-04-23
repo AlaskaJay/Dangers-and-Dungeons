@@ -13,3 +13,6 @@ D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndD
 D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\DangersAndDungeons.exe
 D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\DangersAndDungeons.pdb
 D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\DangersAndDungeons.csprojResolveAssemblyReference.cache
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\obj\Debug\DangersAndDungeons_Content.g.cs
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\bin\Debug\Saves.mdf
+D:\RPGs\EncyclopediaPenzavia\Dangers-and-Dungeons\DangersAndDungeons\DangersAndDungeons\bin\Debug\Saves_log.ldf
