@@ -148,7 +148,7 @@ namespace DangersAndDungeons.Model
 
             if(dungeon.getRoom(room).getMap()[coord.getX(), coord.getY()].GetType() == door.GetType())
             {
-                if(dir == 'N')
+                if (dir == 'N')
                 {
                     room.south();
                     coord = new Coord(3, 5);
@@ -224,15 +224,13 @@ namespace DangersAndDungeons.Model
         public void acceptCommand(String command, Dungeon dungeon)
         {
             if (command.ToLower().Contains("teleport"))
-            {
                 teleport(command.Substring(9), dungeon);
-            }
             else if (command.ToLower().Contains("history"))
-            {
                 displayHistory();
-            }
             else if (command.ToLower().Contains("commands"))
                 displayCommands();
+            else if (command.ToLower().Contains("remove blockage ") && command.Length >= 17)
+                unblockDoor(dungeon, command.ToCharArray()[16]);
             else if (command.Length == 0)
                 commandReply = "No Command";
             else
@@ -304,6 +302,48 @@ namespace DangersAndDungeons.Model
             {
                 commandReply = "Unable to teleport, check spelling and spacing";
             }
+        }
+
+        public void unblockDoor(Dungeon dungeon, char dir)
+        {
+            int dX = coord.getX();
+            int dY = coord.getY();
+
+            if (dir == 'n')
+                dY--;
+            else if (dir == 's')
+                dY++;
+            else if (dir == 'w')
+                dX--;
+            else if (dir == 'e')
+                dX++;
+
+            Door door = new Door();
+            if(dungeon.getRoom(room).getMap()[dX, dY].GetType() == door.GetType())
+            {
+                if (dir == 'n')
+                {
+                    dungeon.getRoom(room.getX(), room.getY() + 1).getMap()[3, 5] = new Floor();
+                }
+                else if (dir == 's')
+                {
+                    dungeon.getRoom(room.getX(), room.getY() - 1).getMap()[3, 1] = new Floor();
+                }
+                else if (dir == 'w')
+                {
+                    dungeon.getRoom(room.getX() - 1, room.getY()).getMap()[5, 3] = new Floor();
+                }
+                else if (dir == 'e')
+                {
+                    dungeon.getRoom(room.getX() + 1, room.getY()).getMap()[1, 3] = new Floor();
+                }
+                commandReply = "Blockage removed.";
+            }
+            else
+            {
+                commandReply = "Unable to remove the blockage, check spelling and spacing";
+            }
+
         }
     }
 }

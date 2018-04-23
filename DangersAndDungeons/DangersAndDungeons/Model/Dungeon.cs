@@ -31,7 +31,10 @@ namespace DangersAndDungeons.Model
 
         public Room getRoom(int x, int y)
         {
-            return map[new Coord(0, 0)];
+            if (map.ContainsKey(new Coord(x, y)))
+                return map[new Coord(x, y)];
+            map[new Coord(x, y)] = new Room();
+            return map[new Coord(x, y)];
         }
     }
 }

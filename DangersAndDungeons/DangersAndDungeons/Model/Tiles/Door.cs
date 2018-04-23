@@ -35,5 +35,7 @@ namespace DangersAndDungeons.Model.Tiles
             display = dis;
             direction = dir;
         }
+
+        public char getDirection() { return direction; }
     }
 }

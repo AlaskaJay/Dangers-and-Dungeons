@@ -35,7 +35,6 @@ namespace DangersAndDungeons.Model
                         map[i, j] = new Wall();
                 }
             }
-            map[3, 1] = new Floor();
             map[3, 0] = new Door('N');
             map[0, 3] = new Door('W');
             map[6, 3] = new Door('E');
